@@ -9,11 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Font google -->
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <!-- Bootstrap  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,8 +27,9 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/falling.css">
+    <!--     <link rel="stylesheet" href="css/falling.css"> -->
     <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/our.css">
     <link rel="stylesheet" href="css/skeleton.css">
 
 
@@ -33,7 +40,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="logo">Whan & Pre</a>
+        <a href="#" class="great-vibes-regular logo">Yok & Pan</a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <!-- <li><a href="#about">Our Story</a></li>
@@ -53,17 +60,64 @@
 
         <div class="hero-content">
 
-            <h1 class="wow fadeInUp" data-wow-delay=".2s">We're Getting Married</h1>
-            <div class="divider"></div>
-            <div class="couple-names wow fadeInDown" data-wow-delay=".3s">Whan & Pre</div>
-            <div class="wedding-date wow fadeInUp" data-wow-delay=".3s">1 NOVEMBER 2025</div>
-            <div class="wedding-date wow fadeInDown" data-wow-delay=".3s">Ratchaburi</div>
-            <p class="wow fadeIn" data-wow-delay=".3s">We invite you to celebrate our love and the beginning of our new
-                life together</p>
+            <!-- <h1 class="wow fadeInUp" data-wow-delay=".2s">We're Getting Married</h1> -->
+            <!-- <div class="divider"></div> -->
+            <div class="couple-names wow fadeInUp great-vibes-regular" data-wow-delay=".3s">YokPan</div>
+            <div class="text wow fadeInDown" data-wow-delay=".3s">New chapter begins</div>
+            <div class="text line wow fadeInUp" data-wow-delay=".3s">Save The Date</div>
+            <div class="text wow fadeInDown" data-wow-delay=".3s">OCTOBER 12, 2025</div>
+            <p class="wow fadeIn" data-wow-delay=".3s">You are invited to our wedding ceremony and to the celebration of
+                our marriage. Don’t miss to meet us and we hope to see you on our special day.
+            </p>
             <div class="wow flipInX">
                 <a href="#rsvp" class="btn ">RSVP</a>
                 <a href="#location" class="btn ">LOCATION</a>
             </div>
+        </div>
+    </section>
+
+
+    <!-- Countdown Section -->
+    <section class="countdown">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title wow fadeIn " data-wow-delay=".3s">
+                        <h2>Counting Down</h2>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="wow fadeIn " data-wow-delay=".4s">Sunday</h2>
+                        <br />
+                        <h4 class="date wow fadeInUp " data-wow-delay=".3s">12 OCT 2025</h4>
+                        <br />
+                        <h4 class="wow fadeIn " data-wow-delay=".5s">Please join us in celebrating our love and
+                            marriage, countdown in…</h4>
+                    </div>
+                    <div class="countdown-container">
+                        <div class="countdown-box">
+                            <div class="countdown-value wow pulse" data-wow-iteration="60" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value wow pulse" data-wow-iteration="60" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value wow pulse" data-wow-iteration="60" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value wow pulse" data-wow-iteration="60" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="wow fadeIn " data-wow-delay=".4s" src="image/S__91422733.jpg" alt="">
+
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -79,34 +133,70 @@
 
     </section>
 
-    <!-- Countdown Section -->
-    <section class="countdown">
-        <div class="section-title wow fadeIn " data-wow-delay=".3s">
-            <h2 class="color-white">Counting Down</h2>
 
+    <section id="couple" class="section couple">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center heading">
+                    <h2>ON BEHALF OF</h2>
+                </div>
+            </div>
 
-        </div>
-        <h4 class="wow fadeIn " data-wow-delay=".4s">We are pleased to invite you to our wedding ceremony and let’s
-            celebrate together on our special day in…</h4>
-        <br />
-        <h4 class="wow fadeIn kanit-extralight" data-wow-delay=".5s">ร่วมแสดงความยินดีไปพร้อมกันกับเรา
-            นับถอยหลังในอีก…</h4>
-        <div class="countdown-container">
-            <div class="countdown-box">
-                <div class="countdown-value wow pulse" data-wow-iteration="60" id="days">00</div>
-                <div class="countdown-label">Days</div>
+            <div class="row couple-wrap">
+                <div class="bride-wrap col-12 col-lg-6 clearfix">
+                    <div class="bride">
+                        <img src="image/yok.jpg" alt="bride" class="img-responsive">
+                    </div>
+
+                    <div class="desc-groom">
+                        <h3>Bride’s Parent</h3>
+
+                        <p>
+                            รัชนี
+                        </p>
+                    </div>
+                </div>
+
+                <p class="heart text-center wow pulse" data-wow-iteration="60">
+                    <i class="bi bi-heart-fill"></i>
+                </p>
+
+                <div class="groom-wrap col-12 col-lg-6">
+                    <div class="groom">
+                        <img src="/image/pan.jpg" alt="groom" class="img-responsive">
+                    </div>
+
+                    <div class="desc-bride">
+                        <h3>Groom’s Parent</h3>
+
+                        <p>
+                            วิไลวรรณ & มนตรี
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="countdown-box">
-                <div class="countdown-value wow pulse" data-wow-iteration="60" id="hours">00</div>
-                <div class="countdown-label">Hours</div>
+            <div class="row p-3">
+                <div class="col-12 text-center ">
+                    <h3>WE ARE PLEASED TO INVITE YOU TO THE WEDDING OF</h3>
+                    <h4 class="kanit-extralight">มีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติ เนื่องในพิธีมงคลสมรส</h4>
+                </div>
             </div>
-            <div class="countdown-box">
-                <div class="countdown-value wow pulse" data-wow-iteration="60" id="minutes">00</div>
-                <div class="countdown-label">Minutes</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-value wow pulse" data-wow-iteration="60" id="seconds">00</div>
-                <div class="countdown-label">Seconds</div>
+                <div class="row desc">
+                    <div class="col-lg-6">
+                        <div class="text-center">
+                            <h3 class="wow fadeIn kanit-extralight" data-wow-delay=".4s">นางสาว รัศมีบูหงา ศิวะบุณย์</h3>
+                            <h3 class="wow fadeIn" data-wow-delay=".4s">Ratsamebugha Siwaboon</h3>
+                            <br />
+                            <h4 class="date wow fadeInUp " data-wow-delay=".3s">&</h4>
+                            <br />
+                            <h3 class="wow fadeIn kanit-extralight" data-wow-delay=".4s">นาย พันธกานต์ ไพทยะทัตย์</h3>
+                            <h3 class="wow fadeIn" data-wow-delay=".4s">Pantakarn Phaitayatath</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="wow fadeIn " data-wow-delay=".4s" src="image/S__91422727_0.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -120,16 +210,17 @@
             <div class="eight columns row">
                 <!-- Wedding Events Photo -->
                 <div class="wedding_events_photo wow rollIn" data-wow-delay=".3s">
-                    <img src="image/ring-icon.jpg" alt="แหวน" loading="lazy">
+                    <img src="image/nikah.jpg" alt="Nikah" loading="lazy">
                 </div>
                 <div class="wow fadeIn" data-wow-delay=".4s">
-                    <h2 class="wedding_events_title kanit-extralight" data-wow-iteration="60" data-wow-duration="3s">พิธีการสำคัญ</h2>
+                    <h2 class="wedding_events_title kanit-extralight" data-wow-iteration="60" data-wow-duration="3s">
+                        พิธีนิกะห์</h2>
                 </div>
                 <!-- Wedding Events Info -->
                 <div class="wow fadeIn" data-wow-delay=".5s">
                     <div class="wedding_events_info " data-wow-iteration="60" data-wow-duration="3s">
-                        <h3>16:00 PM - 17:00 PM</h3>
-                        <h3>พิธีสำคัญในการสวมแหวนหมั้นและแสดงความรัก</h3>
+                        <h3>15:00 PM - 16:00 PM</h3>
+                        <h3>Nikah Ceremony</h3>
                     </div>
                 </div>
             </div>
@@ -137,16 +228,17 @@
             <div class="eight columns row">
                 <!-- Wedding events Photo -->
                 <div class="wedding_events_photo wow rollIn" data-wow-delay=".3s">
-                    <img src="./image/wedding-icon.png" alt="งานฉลอง" loading="lazy">
+                    <img src="./image/wedding.jpg" alt="งานฉลอง" loading="lazy">
                 </div>
                 <div class="wow fadeIn" data-wow-delay=".4s">
-                    <h2 class="wedding_events_title kanit-extralight" data-wow-iteration="60" data-wow-duration="3s">ฉลองมงคลสมรส</h2>
+                    <h2 class="wedding_events_title kanit-extralight" data-wow-iteration="60" data-wow-duration="3s">
+                        ฉลองมงคลสมรส</h2>
                 </div>
                 <!-- Wedding Events Info -->
                 <div class="wow fadeIn" data-wow-delay=".5s">
                     <div class="wedding_events_info " data-wow-iteration="60" data-wow-duration="3s">
                         <h3>18:00 PM - 22:00 PM</h3>
-                        <h3>ร่วมรับประทานอาหารและแสดงความยินดี</h3>
+                        <h3>Wedding Celebration</h3>
                     </div>
                 </div>
             </div>
@@ -158,14 +250,14 @@
     <section class="hotel section" id="hotel">
         <div class="container">
             <div class="section-title  wow fadeIn" data-wow-delay=".3s">
-                <h2 class="color-white">Hotel</h2>
+                <h2>Hotel</h2>
             </div>
 
             <div class="hotel-grid">
                 <!-- โรงแรมที่ 1 -->
 
 
-                <div class="org-card wow fadeInLeft">
+               <!--  <div class="org-card wow fadeInLeft">
                     <a class="no-underline" target="_blank" href="https://maps.app.goo.gl/c4dwXenECcyFjsok7">
                         <img src="./image/the_resort.jpg" alt="The Resort โพธาราม " class="org-logo" loading="lazy">
                         <h2 class="org-name kanit-extralight">เดอะ รีสอร์ต โฮเทล โพธาราม</h2>
@@ -174,24 +266,25 @@
                     </a>
                     <p class="org-role">โทร. <a class="no-underline org-role" href="tel:+66973738811">097 373 8811</a>
                     </p>
-                </div>
+                </div> -->
 
                 <!-- โรงแรมที่ 2 -->
 
-                <div class="org-card wow fadeInRight">
+               <!--  <div class="org-card wow fadeInRight">
                     <a class="no-underline" target="_blank" href="https://maps.app.goo.gl/8BW2jCn2rHsMShGg7">
-                        <img src="./image/Wicket_White_Villa.jpg" alt="Wicket White Villa" class="org-logo" loading="lazy">
+                        <img src="./image/Wicket_White_Villa.jpg" alt="Wicket White Villa" class="org-logo"
+                            loading="lazy">
                         <h3 class="org-name">Wicket White Villa</h3>
                         <p class="org-role">เวลาเดินทาง 17 นาที</p>
                         <p class="org-role">ราคาห้องละ 530 บาท <br />มีเตียงเสริม ไม่มีอาหารเช้า</p>
                     </a>
                     <p class="org-role">โทร. <a class="no-underline org-role" href="tel:+66814287896">081 428 7896</a>
                     </p>
-                </div>
+                </div> -->
 
                 <!-- โรงแรมที่ 3 -->
 
-                <div class="org-card wow fadeInLeft">
+                <!-- <div class="org-card wow fadeInLeft">
                     <a class="no-underline" target="_blank" href="https://maps.app.goo.gl/EN2FUufzm3TxjzwR6">
                         <img src="./image/gg.jpg" alt="G&G Ratchaburi" class="org-logo" loading="lazy">
                         <h3 class="org-name">G&G Ratchaburi</h3>
@@ -200,20 +293,21 @@
                     </a>
                     <p class="org-role">โทร. <a class="no-underline org-role" href="tel:+66989896846">098 989 6846</a>
                     </p>
-                </div>
+                </div> -->
 
 
                 <!-- โรงแรมที่ 4 -->
-                <div class="org-card wow fadeInRight">
+               <!--  <div class="org-card wow fadeInRight">
                     <a class="no-underline" target="_blank" href="https://maps.app.goo.gl/fdUSWt87S8LGVSPV9">
-                        <img src="./image/A_house_smaller_than_a_mountain.png" alt="บ้านเล็กกว่าเขา" class="org-logo" loading="lazy">
+                        <img src="./image/A_house_smaller_than_a_mountain.png" alt="บ้านเล็กกว่าเขา" class="org-logo"
+                            loading="lazy">
                         <h2 class="org-name kanit-extralight">บ้านเล็กกว่าเขา</h2>
                         <p class="org-role">เวลาเดินทาง 10 นาที</p>
                         <p class="org-role">ราคาห้องเริ่มต้น 850 บาท <br />ไม่มีเตียงเสริม ไม่มีอาหารเช้า</p>
                     </a>
                     <p class="org-role">โทร. <a class="no-underline org-role" href="tel:+66804265426">080 426 5426</a>
                     </p>
-                </div>
+                </div> -->
 
 
 
@@ -230,155 +324,24 @@
         <p class="wow fadeIn" data-wow-delay=".3s">
             We can't wait to celebrate with you! Please let us know if you'll be able to attend by filling out the form
             below.</p>
-            <p class="kanit-extralight form-title  wow fadeIn" data-wow-delay=".3s">
-                แบบตอบรับคำเชิญเข้าร่วมงานแต่งงาน
-                <br/>วันเสาร์ที่ 1 พ.ย. 2568 ไร่ภาพตะวัน ราชบุรี</p>
-                <div class="form-container">
-                    <!-- <h3 class="ff-title">
+        <!-- <p class="kanit-extralight form-title  wow fadeIn" data-wow-delay=".3s">
+            แบบตอบรับคำเชิญเข้าร่วมงานแต่งงาน
+            <br />วันเสาร์ที่ 1 พ.ย. 2568 ไร่ภาพตะวัน ราชบุรี
+        </p> -->
+        <div class="form-container">
+            <!-- <h3 class="ff-title">
                       แบบตอบรับคำเชิญเข้าร่วมงานแต่งงาน <br/>วันเสาร์ที่ 1 พ.ย. 2568 ไร่ภาพตะวัน ราชบุรี
                     </h3> -->
-                
-                    <form id="rsvpForm">
-                      <div class="ff-item">
-                        <label class="ff-item-qs" for="name">
-                                    ชื่อ-นามสกุล หรือ ชื่อเล่น <span class="ff-required">*</span>
-                                </label>
-                        <input type="text" id="name" name="name" class="ff-widget-control" required>
-                      </div>
-                
-                      <div class="ff-item">
-                        <label class="ff-item-qs">
-                                    คุณสามารถมาร่วมงานได้ไหม
-                               <span class="ff-required">*</span> </label>
-                        <div class="ff-check-table">
-                          <div class="ff-form-check">
-                            <input type="radio" name="attendance" id="yes" value="ได้ ฉันยินดีไปร่วมงาน" required>
-                            <label for="yes">ได้ ฉันยินดีไปร่วมงาน</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="attendance" id="no" value="ขออภัย ไม่สะดวกไปร่วมงานจริงๆ" required>
-                            <label for="no">ขออภัย ไม่สะดวกไปร่วมงานจริงๆ</label>
-                          </div>
-                        </div>
-                      </div>
-                
-                      <div class="ff-item">
-                        <label class="ff-item-qs">
-                                    ท่านเป็นญาติหรือเพื่อน ฝั่งเจ้าบ่าวหรือเจ้าสาว <span class="ff-required">*</span>
-                                </label>
-                        <div class="ff-check-table">
-                          <div class="ff-form-check">
-                            <input type="radio" name="side" id="groom" value="เจ้าบ่าว" required>
-                            <label for="groom">เจ้าบ่าว</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="side" id="bride" value="เจ้าสาว" required>
-                            <label for="bride">เจ้าสาว</label>
-                          </div>
-                        </div>
-                      </div>
-                
-                      <div class="ff-item" id="guestCountContainer" style="display:none;">
-                        <label class="ff-item-qs" for="guestCountSelect">
-                                    จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
-                                </label>
-                        <select id="guestCountSelect" name="guestCountSelect" class="ff-widget-control" required>
-                                    <option value="">-- กรุณาเลือก --</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="อื่นๆ">อื่นๆ</option>
-                                </select>
-                
-                        <div id="otherGuestInputContainer" style="margin-top:10px; display:none;">
-                          <input type="number" min="1" id="otherGuestCount" class="ff-widget-control"
-                                        placeholder="กรุณาระบุจำนวนแขก">
-                        </div>
-                      </div>
-                
-                
-                      <!-- <div class="ff-item" id="guestCountContainer" style="display:none;">
-                        <label class="ff-item-qs">
-                          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
-                        </label>
-                        <div class="ff-check-table">
-                          <div class="ff-form-check">
-                            <input type="radio" name="guestCount" id="guest1" value="1" required>
-                            <label for="guest1">1</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="guestCount" id="guest2" value="2">
-                            <label for="guest2">2</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="guestCount" id="guest3" value="3">
-                            <label for="guest3">3</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="guestCount" id="guest4" value="4">
-                            <label for="guest4">4</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="guestCount" id="guest5" value="5">
-                            <label for="guest5">5</label>
-                          </div>
-                          <div class="ff-form-check">
-                            <input type="radio" name="guestCount" id="guestOther" value="อื่นๆ">
-                            <label for="guestOther">อื่นๆ</label>
-                          </div>
-                        </div>
-                        
-                        <div id="otherGuestInputContainer" style="margin-top:10px; display:none;">
-                          <input type="number" min="1" id="otherGuestCount" class="ff-widget-control" placeholder="ระบุจำนวนแขก">
-                        </div>
-                      </div> -->
-                
-                
-                      <!-- <div class="ff-item" id="guestCountContainer" style="display:none;">
-                        <label class="ff-item-qs" for="guestCount">
-                          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
-                        </label>
-                        <select id="guestCount" name="guestCount" class="ff-widget-control" required>
-                          <option value="">-- กรุณาเลือก --</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="อื่นๆ">อื่นๆ</option>
-                        </select>
-                      </div> -->
-                
-                      <div class="ff-item">
-                        <label class="ff-item-qs" for="message">
-                                    ฝากข้อความถึงเจ้าบ่าวเจ้าสาว
-                                </label>
-                        <textarea id="message" name="message" rows="4" class="ff-widget-control"></textarea>
-                      </div>
-                
-                      <div class="ff-button-bar">
-                        <button type="submit" class="ff-submit">
-                                    <span class="material-icons">send</span>
-                                    <span>ส่งแบบตอบรับ</span>
-                                </button>
-                      </div>
-                    </form>
-                
-                    <div id="success-message">
-                      <p>ส่งแบบตอบรับเรียบร้อย ขอบคุณที่ร่วมแสดงความยินดี!</p>
-                    </div>
-                  </div>
+
     </section>
 
     <!-- Location Section -->
     <section class="section location" id="location">
         <div class="section-title">
-            <h2 class="color-white">Wedding Location</h2>
+            <h2 >Wedding Location</h2>
         </div>
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7349322545465!2d99.74621551081466!3d13.734491386599911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e319caa8aa3b0d%3A0xb789323ed46fb788!2z4LmE4Lij4LmI4Lig4Liy4Lie4LiV4Liw4Lin4Lix4LiZIOC4reC4suC4q-C4suC4oybguYDguITguKPguLfguYjguK3guIfguJTguLfguYjguKE!5e0!3m2!1sen!2sth!4v1745814102132!5m2!1sen!2sth"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1153.2062849921!2d100.61038455506494!3d13.541227283439142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a7a90de9b68b%3A0xdebe9686911e7e4f!2z4Lin4Li04Lin4Liy4LmA4LiK4LmIIOC4muC4suC4h-C4m-C4uQ!5e0!3m2!1sth!2sth!4v1750152168974!5m2!1sth!2sth"
             width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
@@ -421,7 +384,7 @@
 
             // Countdown Timer
             function updateCountdown() {
-                const weddingDate = new Date('November 1, 2025 13:00:00').getTime();
+                const weddingDate = new Date('October 12, 2025 15:00:00').getTime();
                 const now = new Date().getTime();
                 const distance = weddingDate - now;
 
@@ -482,8 +445,8 @@
         <script src="js/falling.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/rsvp.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
             crossorigin="anonymous"></script>
         <script>
             new WOW().init();

@@ -2,19 +2,19 @@
        :root {
            --primary: #e5a1a6;
            /* Soft pink */
-           --secondary: #7d5a5a;
+           --secondary: #646b55;
            /* Muted brown */
            --accent: #d47f7f;
            /* Rosy pink */
            --light: #f9f3f3;
            /* Very light pink */
-           --dark: #3a2e2e;
+           --dark: black;
            /* Dark brown */
            --white: #ffffff;
 
-           --btn: #794a2e;
+           --btn: #646b55;
 
-           --brown: #916e57;
+           --brown: #646b55;
 
            --primary-color: #78492e;
            --primary-dark: #b5a18f;
@@ -157,7 +157,7 @@
        }
 
        .hero p {
-           font-size: 1.2rem;
+           font-size: 0.8rem;
            margin-bottom: 40px;
            max-width: 600px;
            margin-left: auto;
@@ -171,10 +171,33 @@
            font-weight: 500;
        }
 
-       .wedding-date {
+       .text {
            font-size: 1.5rem;
            margin-bottom: 40px;
            letter-spacing: 3px;
+       }
+
+
+       .line::before {
+           position: relative;
+           content: "";
+           top: 50%;
+           left: -50px;
+           width: 30%;
+           height: 2px;
+           background: var(--white);
+           display: inline-block;
+       }
+
+       .line::after {
+           position: relative;
+           content: "";
+           top: 50%;
+           right: -50px;
+           width: 30%;
+           height: 2px;
+           background: var(--white);
+           display: inline-block;
        }
 
        .divider {
@@ -290,6 +313,10 @@
            z-index: -1;
        }
 
+
+
+       /* theme Section */
+
        .theme-color {
            flex: 1;
            position: relative;
@@ -299,8 +326,159 @@
            width: 40%;
            margin: 0 auto;
            display: block;
+           border-radius: 20px;
 
        }
+
+       /* couple Section */
+
+       .couple {
+           padding-top: 100px;
+           padding-bottom: 0px;
+       }
+
+       .couple-wrap {
+           width: 90%;
+           margin: 0 auto;
+           position: relative;
+
+
+           @include media-breakpoint-up(md) {
+               width: 100%;
+           }
+
+           h3 {
+               margin-bottom: 20px;
+               font-size: 24px;
+           }
+
+           p {
+
+               font-family: "Kanit", sans-serif;
+               font-size: 1.1rem;
+           }
+
+
+           .groom-wrap {
+               margin-bottom: 40px;
+
+
+           }
+
+           .bride-wrap {
+               @include media-breakpoint-up(md) {
+                   padding-left: 30px;
+               }
+           }
+       }
+
+       .date::before {
+           position: relative;
+           content: "";
+           top: 50%;
+           left: -50px;
+           width: 30%;
+           height: 2px;
+           background: var(--dark);
+           display: inline-block;
+       }
+
+       .date::after {
+           position: relative;
+           content: "";
+           top: 50%;
+           right: -50px;
+           width: 30%;
+           height: 2px;
+           background: var(--dark);
+           display: inline-block;
+       }
+
+
+       .heart {
+           position: absolute;
+           top: 3em;
+           left: 0;
+           right: 0;
+           z-index: 99;
+
+
+           @include media-breakpoint-up(lg) {
+               display: block;
+           }
+       }
+
+       .groom,
+       .bride {
+           width: 150px;
+           height: 150px;
+           margin: 0 auto 10px;
+           border-radius: 50%;
+
+           @include media-breakpoint-up(md) {
+               float: left;
+           }
+
+           img {
+               width: 150px;
+               height: 150px;
+               border-radius: 50%;
+           }
+       }
+
+       .groom {
+           @include media-breakpoint-up(md) {
+               float: right;
+               margin-right: 5px;
+           }
+       }
+
+       .bride {
+           @include media-breakpoint-up(md) {
+               float: left;
+               margin-left: 5px;
+           }
+       }
+
+       .desc-groom {
+           text-align: center;
+
+           @include media-breakpoint-up(md) {
+               padding-right: 180px;
+               text-align: right;
+           }
+       }
+
+       .desc-bride {
+           text-align: center;
+
+           @include media-breakpoint-up(md) {
+               padding-left: 180px;
+               text-align: left;
+           }
+       }
+
+       .desc img {
+           height: 550px;
+           border-radius: 20px;
+           position: relative;
+           margin: 0 auto;
+
+       }
+
+       .desc .text-center {
+           position: relative;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           color: black;
+           /* ปรับสีตามต้องการ */
+           font-size: 24px;
+           /* ปรับขนาดได้ */
+           font-weight: bold;
+           text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+       }
+
 
 
 
@@ -339,12 +517,12 @@
 
        /* Countdown Section */
        .countdown {
-           background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-               url('../image/ring-background.jpg');
-           background-size: cover;
+           /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+               url('../image/ring-background.jpg'); */
+           /*          background-size: cover;
            background-position: center;
-           background-attachment: fixed;
-           color: var(--white);
+           background-attachment: fixed; */
+           color: var(--black);
            text-align: center;
            padding: 100px 0;
            position: relative;
@@ -360,6 +538,11 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 0;
     } */
+       .countdown img {
+           height: 550px;
+           border-radius: 20px;
+           position: relative;
+       }
 
        .countdown-container {
            display: flex;
@@ -370,11 +553,11 @@
        }
 
        .countdown-box {
-           background-color: rgba(255, 255, 255, 0.1);
+           background-color: #6f42c13b;
            backdrop-filter: blur(5px);
            border-radius: 5px;
-           padding: 30px 20px;
-           min-width: 120px;
+           padding: 30px 7px;
+           min-width: 80px;
        }
 
        .countdown-value {
@@ -463,12 +646,12 @@
 
        /* สไตล์พื้นหลัง */
        .hotel {
-           background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-               url('../image/party.jpg');
-           background-size: cover;
+          /*  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+               url('../image/party.jpg'); */
+          /*  background-size: cover;
            background-position: center;
-           background-attachment: fixed;
-           color: var(--white);
+           background-attachment: fixed; */
+           color: var(--dark);
            text-align: center;
            padding: 100px 0;
            position: relative;
@@ -482,7 +665,7 @@
            left: 0;
            width: 100%;
            height: 100%;
-           background: rgba(0, 0, 0, 0.5);
+          /*  background: rgba(0, 0, 0, 0.5); */
            z-index: 0;
        }
 
@@ -878,7 +1061,7 @@
            padding: 20px;
            display: flex;
            justify-content: center;
-        
+
        }
 
        .ff-title {
@@ -940,7 +1123,7 @@
            justify-content: center;
            margin-top: 30px;
        }
-       
+
        .ff-submit {
            background-color: var(--primary-color);
            color: var(--white);
@@ -1002,11 +1185,11 @@
 
        /* location Section */
        .location {
-           background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        /*    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                url('../image/wedding.jpg');
            background-size: cover;
            background-position: center;
-           background-attachment: fixed;
+           background-attachment: fixed; */
            color: var(--white);
            text-align: center;
            padding: 100px 0;
@@ -1020,7 +1203,7 @@
            left: 0;
            width: 100%;
            height: 100%;
-           background: rgba(0, 0, 0, 0.4);
+          /*  background: rgba(0, 0, 0, 0.4); */
            /* ความมืดโปร่งใส */
            backdrop-filter: blur(8px);
            /* << เบลอพื้นหลังจริง */
@@ -1101,6 +1284,26 @@
                height: 100vh;
            }
 
+           .line::before {
+               width: 20%;
+               left: -20px;
+           }
+
+           .date::before {
+               width: 15%;
+               left: -20px;
+           }
+
+           .line::after {
+               width: 20%;
+               right: -20px;
+           }
+
+           .date::after {
+               width: 15%;
+               right: -20px;
+           }
+
            .nav-links {
                position: fixed;
                top: 0;
@@ -1145,6 +1348,12 @@
                padding: 70px 0;
            }
 
+           .desc img{
+            width: 100%;
+               height: 100%;
+               padding-top: 20px;
+           }
+
            .countdown {
                background-attachment: scroll;
            }
@@ -1156,6 +1365,12 @@
 
            .countdown-value {
                font-size: 2rem;
+           }
+
+           .countdown img {
+               width: 100%;
+               height: 100%;
+               padding-top: 20px;
            }
 
            .hotel {
