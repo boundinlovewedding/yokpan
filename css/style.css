@@ -14,7 +14,7 @@
 
            --btn: #646b55;
 
-           --brown: #646b55;
+           --font: #96948c;
 
            --primary-color: #78492e;
            --primary-dark: #b5a18f;
@@ -63,6 +63,10 @@
 
        .color-white {
            color: var(--white) !important;
+       }
+
+       .color-font {
+           color: var(--btn) !important;
        }
 
        .navbar.scrolled {
@@ -316,14 +320,18 @@
 
 
        /* theme Section */
+       #theme {
+           background-color: rgba(150, 148, 140, 0.3);
+       }
 
        .theme-color {
+
            flex: 1;
            position: relative;
        }
 
        .theme-color img {
-           width: 40%;
+           width: 100%;
            margin: 0 auto;
            display: block;
            border-radius: 20px;
@@ -466,7 +474,7 @@
 
        }
 
-       .desc .text-center {
+       .desc .text {
            position: relative;
            top: 50%;
            left: 50%;
@@ -553,7 +561,7 @@
        }
 
        .countdown-box {
-           background-color: #6f42c13b;
+           /* background-color: #96948c; */
            backdrop-filter: blur(5px);
            border-radius: 5px;
            padding: 30px 7px;
@@ -573,7 +581,12 @@
        }
 
        /*event*/
-       .container .columns {
+
+       #event {
+           background-color: rgba(100, 107, 85, 0.2);
+       }
+
+       /*        .container .columns {
            float: left;
            display: inline;
            margin-left: 10px;
@@ -582,7 +595,7 @@
 
        .container .eight.columns {
            width: 460px;
-       }
+       } */
 
        #wedding_events {
            border-bottom: 15px solid #fce4e9;
@@ -601,7 +614,7 @@
            -webkit-border-radius: 1000px;
            -moz-border-radius: 1000px;
            border-radius: 1000px;
-           background: var(--brown);
+           /*  background: var(--brown); */
            padding: 8px;
            margin-bottom: 30px;
        }
@@ -626,7 +639,7 @@
            text-align: center;
            font-size: 35px;
            line-height: 40px;
-           color: #3d1f24;
+           /*   color: #3d1f24; */
        }
 
        .wedding_events_info {
@@ -639,16 +652,16 @@
 
        .wedding_events_info h3 {
            font-family: 'Kanit', sans-serif;
-           font-size: 17px;
+           font-size: 18px;
            line-height: 24px;
-           color: #704f55;
+           /*  color: #704f55; */
        }
 
        /* สไตล์พื้นหลัง */
        .hotel {
-          /*  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+           /*  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                url('../image/party.jpg'); */
-          /*  background-size: cover;
+           /*  background-size: cover;
            background-position: center;
            background-attachment: fixed; */
            color: var(--dark);
@@ -665,7 +678,7 @@
            left: 0;
            width: 100%;
            height: 100%;
-          /*  background: rgba(0, 0, 0, 0.5); */
+           /*  background: rgba(0, 0, 0, 0.5); */
            z-index: 0;
        }
 
@@ -1053,6 +1066,61 @@
            margin: 0 auto 40px
        }
 
+       .rsvp img {
+           /* กำหนดความกว้าง */
+           width: 100%;
+           height: 600px;
+           /* กำหนดความสูง */
+           overflow: hidden;
+           /* ตัดส่วนเกินที่เลยออกจากกรอบ */
+
+           object-fit: cover;
+           /* ให้รูปครอบเต็มกรอบและตัดส่วนเกิน */
+           object-position: center;
+           /* จัดตำแหน่งให้แสดงตรงกลาง */
+           border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+           position: relative;
+           margin: 0 auto;
+
+       }
+
+       .box {
+           animation: border 5s infinite alternate ease-in-out, background 10s infinite alternate ease-in-out;
+           width: 50%;
+           height: 600px;
+           /* กำหนดความสูง */
+           overflow: hidden;
+           /* ตัดส่วนเกินที่เลยออกจากกรอบ */
+           object-position: center;
+           background-image: url('../image/S__91422732_0.jpg');
+
+       }
+
+       @keyframes border {
+           from {
+               border-radius: 25% 67% 73% 60% / 56% 28% 80% 14%;
+           }
+
+           to {
+               border-radius: 57% 34% 12% 45% / 15% 34% 23% 90%;
+
+           }
+       }
+
+       @keyframes background {
+           0% {
+               background-position: 0% 75%
+           }
+
+           50% {
+               background-position: 100% 25%
+           }
+
+           100% {
+               background-position: 25% 100%
+           }
+       }
+
        .form-container {
            font-family: 'Kanit', sans-serif;
            color: var(--text-color);
@@ -1185,7 +1253,7 @@
 
        /* location Section */
        .location {
-        /*    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+           /*    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                url('../image/wedding.jpg');
            background-size: cover;
            background-position: center;
@@ -1203,7 +1271,7 @@
            left: 0;
            width: 100%;
            height: 100%;
-          /*  background: rgba(0, 0, 0, 0.4); */
+           /*  background: rgba(0, 0, 0, 0.4); */
            /* ความมืดโปร่งใส */
            backdrop-filter: blur(8px);
            /* << เบลอพื้นหลังจริง */
@@ -1348,8 +1416,12 @@
                padding: 70px 0;
            }
 
-           .desc img{
-            width: 100%;
+           .bi-heart-fill {
+               display: none;
+           }
+
+           .desc img {
+               width: 100%;
                height: 100%;
                padding-top: 20px;
            }
@@ -1386,6 +1458,11 @@
                text-align: center;
                max-width: 600px;
                margin: 0px 10px 40px 10px
+           }
+
+           .rsvp .box {
+
+               display: none;
            }
 
            .location {
