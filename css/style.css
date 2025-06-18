@@ -70,9 +70,10 @@
        }
 
        .navbar.scrolled {
-           background-color: rgba(255, 255, 255, 0.9);
+           background-color: rgba(53, 61, 45, 0.7);
            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
            padding: 15px 40px;
+
        }
 
        .logo {
@@ -83,7 +84,7 @@
        }
 
        .navbar.scrolled .logo {
-           color: var(--dark);
+        color: var(--white);
        }
 
        .nav-links {
@@ -104,7 +105,7 @@
        }
 
        .navbar.scrolled .nav-links a {
-           color: var(--dark);
+        color: var(--white);
        }
 
        .nav-links a:after {
@@ -522,6 +523,7 @@
        .gallery-item:hover img {
            transform: scale(1.1);
        }
+
 
        /* Countdown Section */
        .countdown {
@@ -1291,8 +1293,8 @@
 
        /* Footer */
        .footer {
-           /* background-color: var(--dark);
-           color: var(--white); */
+           background-color: #353d2d;
+           color: var(--white); 
            text-align: center;
            padding: 50px 0;
            font-weight: 500;
