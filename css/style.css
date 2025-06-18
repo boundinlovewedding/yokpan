@@ -1040,16 +1040,17 @@
        /* RSVP Section */
 
        .rsvp {
-           /*  background-color: var(--light); */
+        background-color: rgba(150, 148, 140, 0.25);
            text-align: center;
            height: 1200px;
            position: relative;
        }
 
        .rsvp-form {
-           max-width: 600px;
-           margin: 0 auto;
-           padding: 0 40px;
+           height: 650px;
+           
+           /* margin: 0 auto; */
+           /* padding: 0 40px; */
        }
 
        .form-title {
@@ -1085,7 +1086,7 @@
        }
 
        .box {
-           animation: border 5s infinite alternate ease-in-out, background 10s infinite alternate ease-in-out;
+           animation: border 10s infinite alternate ease-in-out, background 20s infinite alternate ease-in-out;
            width: 50%;
            height: 600px;
            /* กำหนดความสูง */
@@ -1290,16 +1291,19 @@
 
        /* Footer */
        .footer {
-           background-color: var(--dark);
-           color: var(--white);
+           /* background-color: var(--dark);
+           color: var(--white); */
            text-align: center;
            padding: 50px 0;
+           font-weight: 500;
+           font-size: 1rem;
        }
 
        .footer-logo {
            font-family: "Julius Sans One", sans-serif;
            font-size: 2rem;
            margin-bottom: 20px;
+
        }
 
        .social-links {
@@ -1324,8 +1328,9 @@
        }
 
        .copyright {
-           opacity: 0.7;
-           font-size: 0.9rem;
+           opacity: 1;
+           font-size: 1rem;
+           font-weight: 400;
        }
 
        /* Responsive Styles */
