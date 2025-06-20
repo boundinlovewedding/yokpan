@@ -441,6 +441,7 @@
            background-size: cover;
            background-position: center;
            background-attachment: fixed;
+           width: 100%;
 
        }
 
@@ -1442,6 +1443,11 @@
                left: -20px;
            }
 
+           .org-logo{
+            width: 250px;
+            height: 250px;
+           }
+
            .line::after {
                width: 20%;
                right: -20px;
@@ -1496,7 +1502,7 @@
                padding: 70px 0;
            }
 
-           .bi-heart-fill {
+           .heart {
                display: none;
            }
 
