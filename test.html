@@ -1,0 +1,132 @@
+<section class="section gallery" id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="owl-carousel owl-theme gallery-carousel">
+                <a href="gallery/gallery1.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery1.jpg" alt="Gallery 1" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery2.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery2.jpg" alt="Gallery 2" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery3.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery3.jpg" alt="Gallery 3" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery4.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery4.jpg" alt="Gallery 4" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery5.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery5.jpg" alt="Gallery 5" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery6.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery6.jpg" alt="Gallery 6" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery7.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery7.jpg" alt="Gallery 7" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+                <a href="gallery/gallery8.jpg" data-lightbox="wedding-gallery" class="gallery-item wow fadeInUp">
+                    <div class="image-container">
+                        <img src="gallery/gallery8.jpg" alt="Gallery 8" loading="lazy" />
+                        <div class="hover-icon"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add these CSS and JS libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.gallery-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
+
+<style>
+    .gallery-carousel .image-container {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+    }
+    
+    .gallery-carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
+    
+    .gallery-carousel .hover-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2rem;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .gallery-carousel a:hover .hover-icon {
+        opacity: 1;
+    }
+    
+    .gallery-carousel a:hover img {
+        filter: brightness(0.7);
+    }
+    
+    .gallery-carousel .owl-nav {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .gallery-carousel .owl-nav button {
+        background: #ccc;
+        border: none;
+        padding: 5px 15px;
+        margin: 0 5px;
+        border-radius: 3px;
+    }
+</style>

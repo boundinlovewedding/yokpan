@@ -11,7 +11,7 @@
            --dark: black;
            /* Dark brown */
            --white: #ffffff;
-
+           --gray: #96948c;
            --btn: #646b55;
 
            --font: #96948c;
@@ -65,8 +65,8 @@
            color: var(--white) !important;
        }
 
-       .color-font {
-           color: var(--btn) !important;
+       .color-gray {
+           color: var(--gray) !important;
        }
 
        .navbar.scrolled {
@@ -84,7 +84,7 @@
        }
 
        .navbar.scrolled .logo {
-        color: var(--white);
+           color: var(--white);
        }
 
        .nav-links {
@@ -105,7 +105,7 @@
        }
 
        .navbar.scrolled .nav-links a {
-        color: var(--white);
+           color: var(--white);
        }
 
        .nav-links a:after {
@@ -137,8 +137,8 @@
        /* Hero Section */
        .hero {
            height: 110vh;
-           background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-               url('../image/slide.png');
+           background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+               url('../gallery/gallery7.jpg');
            background-size: cover;
            background-position: center;
            display: flex;
@@ -153,6 +153,7 @@
        .hero-content {
            max-width: 800px;
            padding: 0 20px;
+           font-weight: 700;
        }
 
        .hero h1 {
@@ -352,9 +353,7 @@
            position: relative;
 
 
-           @include media-breakpoint-up(md) {
-               width: 100%;
-           }
+
 
            h3 {
                margin-bottom: 20px;
@@ -374,11 +373,7 @@
 
            }
 
-           .bride-wrap {
-               @include media-breakpoint-up(md) {
-                   padding-left: 30px;
-               }
-           }
+
        }
 
        .date::before {
@@ -412,9 +407,7 @@
            z-index: 99;
 
 
-           @include media-breakpoint-up(lg) {
-               display: block;
-           }
+
        }
 
        .groom,
@@ -424,9 +417,7 @@
            margin: 0 auto 10px;
            border-radius: 50%;
 
-           @include media-breakpoint-up(md) {
-               float: left;
-           }
+
 
            img {
                width: 150px;
@@ -436,35 +427,35 @@
        }
 
        .groom {
-           @include media-breakpoint-up(md) {
-               float: right;
-               margin-right: 5px;
-           }
+
+           float: right;
+           margin-right: 5px;
+
        }
 
        .bride {
-           @include media-breakpoint-up(md) {
-               float: left;
-               margin-left: 5px;
-           }
+
+           float: left;
+           margin-left: 5px;
+
        }
 
        .desc-groom {
            text-align: center;
 
-           @include media-breakpoint-up(md) {
-               padding-right: 180px;
-               text-align: right;
-           }
+
+           padding-right: 180px;
+           text-align: right;
+
        }
 
        .desc-bride {
            text-align: center;
 
-           @include media-breakpoint-up(md) {
-               padding-left: 180px;
-               text-align: left;
-           }
+
+           padding-left: 180px;
+           text-align: left;
+
        }
 
        .desc img {
@@ -498,7 +489,7 @@
 
        .gallery-grid {
            display: grid;
-           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
            gap: 20px;
            padding: 0 40px;
            max-width: 1400px;
@@ -522,6 +513,51 @@
 
        .gallery-item:hover img {
            transform: scale(1.1);
+       }
+
+       .gallery-carousel .image-container {
+           position: relative;
+           overflow: hidden;
+           height: 400px;
+       }
+
+       .gallery-carousel img {
+           width: 100%;
+           height: 400px;
+           object-fit: cover;
+           transition: all 0.3s ease;
+       }
+
+       .gallery-carousel .hover-icon {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           color: white;
+           font-size: 2rem;
+           opacity: 0;
+           transition: all 0.3s ease;
+       }
+
+       .gallery-carousel a:hover .hover-icon {
+           opacity: 1;
+       }
+
+       .gallery-carousel a:hover img {
+           filter: brightness(0.7);
+       }
+
+       .gallery-carousel .owl-nav {
+           text-align: center;
+           margin-top: 20px;
+       }
+
+       .gallery-carousel .owl-nav button {
+           background: #ccc;
+           border: none;
+           padding: 5px 15px;
+           margin: 0 5px;
+           border-radius: 3px;
        }
 
 
@@ -549,9 +585,15 @@
         z-index: 0;
     } */
        .countdown img {
-           height: 550px;
+
            border-radius: 20px;
            position: relative;
+           width: 100%;
+           height: 550px;
+           margin-left: 50px;
+           object-fit: cover;
+           /* ให้ภาพไม่ถูกตัด */
+           display: block;
        }
 
        .countdown-container {
@@ -656,6 +698,7 @@
            font-family: 'Kanit', sans-serif;
            font-size: 18px;
            line-height: 24px;
+           font-weight: 200;
            /*  color: #704f55; */
        }
 
@@ -1042,7 +1085,7 @@
        /* RSVP Section */
 
        .rsvp {
-        background-color: rgba(150, 148, 140, 0.25);
+           background-color: rgba(150, 148, 140, 0.25);
            text-align: center;
            height: 1200px;
            position: relative;
@@ -1050,10 +1093,12 @@
 
        .rsvp-form {
            height: 750px;
-           
+
            /* margin: 0 auto; */
            /* padding: 0 40px; */
        }
+
+
 
        .form-title {
            text-align: center;
@@ -1080,22 +1125,18 @@
            object-fit: cover;
            /* ให้รูปครอบเต็มกรอบและตัดส่วนเกิน */
            object-position: center;
+           border-radius: 20px;
            /* จัดตำแหน่งให้แสดงตรงกลาง */
-           border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+           /*  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%; */
            position: relative;
-           margin: 0 auto;
+           margin-bottom: 20px;
 
        }
 
        .box {
-           animation: border 10s infinite alternate ease-in-out, background 20s infinite alternate ease-in-out;
-           width: 50%;
-           height: 600px;
-           /* กำหนดความสูง */
            overflow: hidden;
-           /* ตัดส่วนเกินที่เลยออกจากกรอบ */
            object-position: center;
-           background-image: url('../image/S__91422732_0.jpg');
+
 
        }
 
@@ -1294,7 +1335,7 @@
        /* Footer */
        .footer {
            background-color: #353d2d;
-           color: var(--white); 
+           color: var(--white);
            text-align: center;
            padding: 50px 0;
            font-weight: 500;
@@ -1339,6 +1380,23 @@
        @media (max-width: 992px) {
            .about-content {
                flex-direction: column;
+           }
+
+           .countdown-container{
+            margin: 0;
+           }
+           .countdown img{
+
+            margin: auto;
+           }
+           .rsvp {
+               height: 100%;
+           }
+
+           .rsvp h5,
+           .rsvp h3 {
+               margin: 40px;
+               color: var(--black);
            }
 
            .about-image {
@@ -1539,7 +1597,7 @@
            }
 
            .theme-color img {
-               width: 70%;
+               width: 100%;
                margin: 0 auto;
                display: block;
 
