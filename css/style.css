@@ -1536,7 +1536,11 @@
            }
 
            .rsvp {
-               height: 1200px;
+               height: 100%;
+           }
+
+           .rsvp-form{
+            height: 800px;
            }
 
            .rsvp p {
@@ -1546,11 +1550,7 @@
                margin: 0px 10px 40px 10px
            }
 
-           .rsvp .box {
-
-               display: none;
-           }
-
+      
            .location {
                background-attachment: scroll;
            }
