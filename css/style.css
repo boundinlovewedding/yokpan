@@ -1105,6 +1105,10 @@
 
        /* RSVP Section */
 
+       #rsvp {
+           scroll-margin-top: 100px;
+       }
+
        .rsvp {
 
            text-align: center;
