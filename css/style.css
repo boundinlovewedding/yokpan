@@ -725,10 +725,10 @@
        /* สไตล์พื้นหลัง */
 
        #hotel {
-        height: 800px;
-        overflow-y: auto;
-        padding-bottom: 50px;
-      }
+           height: 800px;
+           overflow-y: auto;
+           padding-bottom: 50px;
+       }
 
        .hotel {
            background-color: rgba(150, 148, 140, 0.25);
@@ -744,14 +744,14 @@
        }
 
        /* Overlay สีเพื่อความอ่านง่าย */
-       .hotel::before {
+      /*  .hotel::before {
            content: '';
            position: absolute;
            top: 0;
            left: 0;
 
            z-index: 0;
-       }
+       } */
 
 
 
@@ -1431,6 +1431,14 @@
        }
 
        @media (max-width: 768px) {
+
+           .section {
+               scroll-margin-top: 120px;
+               /* สำหรับ scroll auto */
+               padding-top: 80px;
+               /* เว้นให้มีที่ให้หัวข้อแสดง */
+           }
+
            .navbar {
                padding: 15px 20px;
            }

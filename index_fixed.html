@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding of Yoke & Pan</title>
+  <link rel="stylesheet" href="style.fixed.min.css" />
+</head>
+<body>
+
+  <!-- Hotel Section -->
+  <section class="section hotel" id="hotel">
+    <h2>Hotel</h2>
+    <p>เนื้อหาโรงแรม</p>
+  </section>
+
+  <!-- RSVP Section -->
+  <section class="section rsvp" id="rsvp">
+    <h2>RSVP</h2>
+    <p>กรุณาตอบรับคำเชิญ</p>
+  </section>
+
+  <!-- Navigation Button (simulate) -->
+  <nav>
+    <a href="#rsvp" class="btn">RSVP</a>
+  </nav>
+
+  <script>
+    // Smooth scrolling fix
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
