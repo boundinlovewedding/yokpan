@@ -329,7 +329,7 @@
        .theme-color {
 
            flex: 1;
-           position: relative;
+
        }
 
        .theme-color img {
@@ -432,7 +432,7 @@
        }
 
        .text-please {
-           height: 400px;
+           height: 500px;
            text-align: center;
            background: linear-gradient(rgba(0 0 0 / 7%), rgba(0, 0, 0, 0.3)),
                url('../image/please-img.jpg');
@@ -744,7 +744,7 @@
        }
 
        /* Overlay สีเพื่อความอ่านง่าย */
-      /*  .hotel::before {
+       /*  .hotel::before {
            content: '';
            position: absolute;
            top: 0;
@@ -1110,7 +1110,7 @@
        /* RSVP Section */
 
        #rsvp {
-           scroll-margin-top: 200px;
+           scroll-margin-top: 300px;
            /* ปรับตามขนาด navbar หรือ padding */
        }
 
@@ -1226,6 +1226,8 @@
            /*  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%; */
            position: relative;
 
+           
+
 
        }
 
@@ -1268,11 +1270,15 @@
            transform: scale(1.1);
        }
 
+       .location-carousel{
+        margin: 40px 0 40px 0;
+       }
+
        .location-carousel .image-container {
            position: relative;
            overflow: hidden;
            height: 250px;
-           margin-bottom: 40px;
+
        }
 
        .location-carousel img {
@@ -1438,12 +1444,39 @@
                /* เว้นให้มีที่ให้หัวข้อแสดง */
            }
 
+           .event {
+               height: 160vh;
+           }
+
+           .countdown {
+               height: 130vh;
+           }
+
+           .theme {
+               height: 90vh;
+           }
+
+           .couple {
+               height: 200vh;
+           }
+
+           .location{
+               height: 115vh;
+           }
+
+
+           .hero {
+               height: 100vh;
+           }
+
+
+
            .navbar {
                padding: 15px 20px;
            }
 
-           .hero {
-               height: 100vh;
+           .theme-color {
+               padding: 15px 20px;
            }
 
            .line::before {
