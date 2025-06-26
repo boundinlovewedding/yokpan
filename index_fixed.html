@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <base target="_top">
   <link
@@ -97,24 +96,6 @@
       margin-top: 30px;
     }
 
-    /* .ff-submit {
-      background-color: var(--primary-color);
-      color: var(--text-color);
-      border: none;
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s;
-    }
-
-    .ff-submit:hover {
-      background-color: var(--primary-dark);
-    } */
     .ff-submit {
       background-color: var(--primary-color);
       color: var(--white);
@@ -158,13 +139,8 @@
     }
   </style>
 </head>
-
 <body>
   <div class="form-container">
-    <!-- <h3 class="ff-title">
-      แบบตอบรับคำเชิญเข้าร่วมงานแต่งงาน <br/>วันเสาร์ที่ 1 พ.ย. 2568 ไร่ภาพตะวัน ราชบุรี
-    </h3> -->
-
     <form id="rsvpForm">
       <div class="ff-item">
         <label class="ff-item-qs" for="name">
@@ -224,59 +200,6 @@
         </div>
       </div>
 
-
-      <!-- <div class="ff-item" id="guestCountContainer" style="display:none;">
-        <label class="ff-item-qs">
-          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
-        </label>
-        <div class="ff-check-table">
-          <div class="ff-form-check">
-            <input type="radio" name="guestCount" id="guest1" value="1" required>
-            <label for="guest1">1</label>
-          </div>
-          <div class="ff-form-check">
-            <input type="radio" name="guestCount" id="guest2" value="2">
-            <label for="guest2">2</label>
-          </div>
-          <div class="ff-form-check">
-            <input type="radio" name="guestCount" id="guest3" value="3">
-            <label for="guest3">3</label>
-          </div>
-          <div class="ff-form-check">
-            <input type="radio" name="guestCount" id="guest4" value="4">
-            <label for="guest4">4</label>
-          </div>
-          <div class="ff-form-check">
-            <input type="radio" name="guestCount" id="guest5" value="5">
-            <label for="guest5">5</label>
-          </div>
-          <div class="ff-form-check">
-            <input type="radio" name="guestCount" id="guestOther" value="อื่นๆ">
-            <label for="guestOther">อื่นๆ</label>
-          </div>
-        </div>
-        
-        <div id="otherGuestInputContainer" style="margin-top:10px; display:none;">
-          <input type="number" min="1" id="otherGuestCount" class="ff-widget-control" placeholder="ระบุจำนวนแขก">
-        </div>
-      </div> -->
-
-
-      <!-- <div class="ff-item" id="guestCountContainer" style="display:none;">
-        <label class="ff-item-qs" for="guestCount">
-          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
-        </label>
-        <select id="guestCount" name="guestCount" class="ff-widget-control" required>
-          <option value="">-- กรุณาเลือก --</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="อื่นๆ">อื่นๆ</option>
-        </select>
-      </div> -->
-
       <div class="ff-item">
         <label class="ff-item-qs" for="message">
           ฝากข้อความถึงเจ้าบ่าวเจ้าสาว
@@ -308,9 +231,6 @@
         const guestSelect = document.getElementById('guestCountSelect');
         const otherInput = document.getElementById('otherGuestInputContainer');
 
-
-
-
         if (this.value === 'ได้ ฉันยินดีไปร่วมงาน') {
           guestContainer.style.display = 'block';
           guestSelect.setAttribute('required', true);
@@ -331,8 +251,6 @@
       const otherInput = document.getElementById('otherGuestInputContainer');
       const otherGuest = document.getElementById('otherGuestCount');
 
-
-
       if (this.value === 'อื่นๆ') {
         otherInput.style.display = 'block';
         otherGuest.setAttribute('required', true);
@@ -342,8 +260,6 @@
         otherGuest.removeAttribute('required');
       }
     });
-
-
 
     document.getElementById('rsvpForm').addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -364,16 +280,23 @@
 
       if (formData.attendance === 'ได้ ฉันยินดีไปร่วมงาน' && (!formData.guestCount || isNaN(formData.guestCount) || formData.guestCount < 1)) {
         alert('กรุณาระบุจำนวนแขกให้ถูกต้อง');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-icons">send</span> <span>ส่งแบบตอบรับ</span>';
         return;
       }
 
       if (!formData.name || !formData.attendance || !formData.side) {
         alert('กรุณากรอกข้อมูลที่จำเป็นให้ครบ');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-icons">send</span> <span>ส่งแบบตอบรับ</span>';
         return;
       }
 
       try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyKggqAoJip5Urmvbl00szbqeK6aGpFCklllbwO9c1KTUE1GHstousFAUOMA6ZVSQo/exec', {
+        // *** สำคัญมาก: แทนที่ URL ด้านล่างด้วย URL ที่ได้จากการ Deploy Google Apps Script ของคุณ ***
+        const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbyAwjbv8iT24dKc-F4kU1423h7fAsZMd6M7rvqZrmjOhy8JI8tWmx8193QWdg7XrMo/exec'; // เช่น 'https://script.google.com/macros/s/AKfycbzz.../exec'
+
+        const res = await fetch(appsScriptUrl, {
           method: 'POST',
           body: JSON.stringify(formData),
           headers: {
@@ -390,12 +313,15 @@
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
           alert('เกิดข้อผิดพลาด: ' + result.message);
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span class="material-icons">send</span> <span>ส่งแบบตอบรับ</span>';
         }
       } catch (error) {
         alert('การส่งข้อมูลล้มเหลว: ' + error.message);
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span class="material-icons">send</span> <span>ส่งแบบตอบรับ</span>';
       }
     });
   </script>
 </body>
-
 </html>
