@@ -1,47 +1,401 @@
-
 <!DOCTYPE html>
-<html lang="th">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding of Yoke & Pan</title>
-  <link rel="stylesheet" href="style.fixed.min.css" />
+  <base target="_top">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #646b55;
+      --primary-dark: #b5a18f;
+      --dark: #3a2e2e;
+      --text-color: black;
+      --white: #ffffff;
+      --border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      color: black;
+
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-container {
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .ff-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .ff-item {
+      margin-bottom: 20px;
+    }
+
+    .ff-item-qs {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 300;
+    }
+
+    .ff-required {
+      color: #d93025;
+    }
+
+    .ff-widget-control {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 16px;
+    }
+
+    .ff-check-table {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    input[type=radio] {
+      accent-color: black;
+    }
+
+    select {}
+
+    option {
+      color: black;
+    }
+
+    .ff-form-check {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .ff-form-check-input {
+      margin-right: 8px;
+    }
+
+    .ff-button-bar {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    /* .ff-submit {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .ff-submit:hover {
+      background-color: var(--primary-dark);
+    } */
+    .ff-submit {
+      background-color: var(--primary-color);
+      color: var(--white);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .ff-submit:hover {
+      background-color: transparent;
+      color: var(--primary-color);
+    }
+
+    .ff-submit-outline {
+      background-color: transparent;
+      border: 2px solid var(--white);
+      margin-left: 15px;
+    }
+
+    .ff-submit-outline:hover {
+      background-color: var(--white);
+      color: var(--dark);
+    }
+
+    #success-message {
+      display: none;
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="form-container">
+    <!-- <h3 class="ff-title">
+      แบบตอบรับคำเชิญเข้าร่วมงานแต่งงาน <br/>วันเสาร์ที่ 1 พ.ย. 2568 ไร่ภาพตะวัน ราชบุรี
+    </h3> -->
 
-  <!-- Hotel Section -->
-  <section class="section hotel" id="hotel">
-    <h2>Hotel</h2>
-    <p>เนื้อหาโรงแรม</p>
-  </section>
+    <form id="rsvpForm">
+      <div class="ff-item">
+        <label class="ff-item-qs" for="name">
+          ชื่อ-นามสกุล หรือ ชื่อเล่น <span class="ff-required">*</span>
+        </label>
+        <input type="text" id="name" name="name" class="ff-widget-control" required>
+      </div>
 
-  <!-- RSVP Section -->
-  <section class="section rsvp" id="rsvp">
-    <h2>RSVP</h2>
-    <p>กรุณาตอบรับคำเชิญ</p>
-  </section>
+      <div class="ff-item">
+        <label class="ff-item-qs">
+          คุณสามารถมาร่วมงานได้ไหม
+          <span class="ff-required">*</span> </label>
+        <div class="ff-check-table">
+          <div class="ff-form-check">
+            <input type="radio" name="attendance" id="yes" value="ได้ ฉันยินดีไปร่วมงาน" required>
+            <label for="yes">ได้ ฉันยินดีไปร่วมงาน</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="attendance" id="no" value="ขออภัย ไม่สะดวกไปร่วมงานจริงๆ" required>
+            <label for="no">ขออภัย ไม่สะดวกไปร่วมงานจริงๆ</label>
+          </div>
+        </div>
+      </div>
 
-  <!-- Navigation Button (simulate) -->
-  <nav>
-    <a href="#rsvp" class="btn">RSVP</a>
-  </nav>
+      <div class="ff-item">
+        <label class="ff-item-qs">
+          ท่านเป็นญาติหรือเพื่อน ฝั่งเจ้าบ่าวหรือเจ้าสาว <span class="ff-required">*</span>
+        </label>
+        <div class="ff-check-table">
+          <div class="ff-form-check">
+            <input type="radio" name="side" id="groom" value="เจ้าบ่าว" required>
+            <label for="groom">เจ้าบ่าว</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="side" id="bride" value="เจ้าสาว" required>
+            <label for="bride">เจ้าสาว</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="ff-item" id="guestCountContainer" style="display:none;">
+        <label class="ff-item-qs" for="guestCountSelect">
+          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
+        </label>
+        <select id="guestCountSelect" name="guestCountSelect" class="ff-widget-control" required>
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+
+        <div id="otherGuestInputContainer" style="margin-top:10px; display:none;">
+          <input type="number" min="1" id="otherGuestCount" class="ff-widget-control" placeholder="กรุณาระบุจำนวนแขก">
+        </div>
+      </div>
+
+
+      <!-- <div class="ff-item" id="guestCountContainer" style="display:none;">
+        <label class="ff-item-qs">
+          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
+        </label>
+        <div class="ff-check-table">
+          <div class="ff-form-check">
+            <input type="radio" name="guestCount" id="guest1" value="1" required>
+            <label for="guest1">1</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="guestCount" id="guest2" value="2">
+            <label for="guest2">2</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="guestCount" id="guest3" value="3">
+            <label for="guest3">3</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="guestCount" id="guest4" value="4">
+            <label for="guest4">4</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="guestCount" id="guest5" value="5">
+            <label for="guest5">5</label>
+          </div>
+          <div class="ff-form-check">
+            <input type="radio" name="guestCount" id="guestOther" value="อื่นๆ">
+            <label for="guestOther">อื่นๆ</label>
+          </div>
+        </div>
+        
+        <div id="otherGuestInputContainer" style="margin-top:10px; display:none;">
+          <input type="number" min="1" id="otherGuestCount" class="ff-widget-control" placeholder="ระบุจำนวนแขก">
+        </div>
+      </div> -->
+
+
+      <!-- <div class="ff-item" id="guestCountContainer" style="display:none;">
+        <label class="ff-item-qs" for="guestCount">
+          จำนวนแขกที่มาร่วมงานรวมตัวคุณเองด้วย <span class="ff-required">*</span>
+        </label>
+        <select id="guestCount" name="guestCount" class="ff-widget-control" required>
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="อื่นๆ">อื่นๆ</option>
+        </select>
+      </div> -->
+
+      <div class="ff-item">
+        <label class="ff-item-qs" for="message">
+          ฝากข้อความถึงเจ้าบ่าวเจ้าสาว
+        </label>
+        <textarea id="message" name="message" rows="4" class="ff-widget-control"></textarea>
+      </div>
+
+      <div class="ff-button-bar">
+        <button type="submit" class="ff-submit">
+          <span class="material-icons">send</span>
+          <span>ส่งแบบตอบรับ</span>
+        </button>
+      </div>
+    </form>
+
+    <div id="success-message">
+      <p>ส่งแบบตอบรับเรียบร้อย ขอขอบคุณทุกท่านมา ณ โอกาสนี้
+        <br />แล้วมาพบกันในวันสำคัญของเราทั้งสองคนนะคะ
+        !
+      </p>
+    </div>
+  </div>
 
   <script>
-    // Smooth scrolling fix
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 100,
-            behavior: 'smooth'
-          });
+    // แสดง/ซ่อน container เมื่อเลือกว่าจะมาร่วมงานหรือไม่
+    document.querySelectorAll('input[name="attendance"]').forEach(el => {
+      el.addEventListener('change', function () {
+        const guestContainer = document.getElementById('guestCountContainer');
+        const guestSelect = document.getElementById('guestCountSelect');
+        const otherInput = document.getElementById('otherGuestInputContainer');
+
+
+
+
+        if (this.value === 'ได้ ฉันยินดีไปร่วมงาน') {
+          guestContainer.style.display = 'block';
+          guestSelect.setAttribute('required', true);
+        } else {
+          guestContainer.style.display = 'none';
+          guestSelect.value = '';
+          guestSelect.removeAttribute('required');
+          otherInput.style.display = 'none';
+          const otherGuest = document.getElementById('otherGuestCount');
+          otherGuest.value = '';
+          otherGuest.removeAttribute('required');
         }
       });
     });
+
+    // แสดงช่อง input เมื่อเลือก "อื่นๆ"
+    document.getElementById('guestCountSelect').addEventListener('change', function () {
+      const otherInput = document.getElementById('otherGuestInputContainer');
+      const otherGuest = document.getElementById('otherGuestCount');
+
+
+
+      if (this.value === 'อื่นๆ') {
+        otherInput.style.display = 'block';
+        otherGuest.setAttribute('required', true);
+      } else {
+        otherInput.style.display = 'none';
+        otherGuest.value = '';
+        otherGuest.removeAttribute('required');
+      }
+    });
+
+
+
+    document.getElementById('rsvpForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const submitBtn = document.querySelector('.ff-submit');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-icons">hourglass_top</span> กำลังส่ง...';
+
+      const formData = {
+        name: document.getElementById('name').value.trim(),
+        attendance: document.querySelector('input[name="attendance"]:checked')?.value,
+        side: document.querySelector('input[name="side"]:checked')?.value,
+        guestCount: document.getElementById('guestCountSelect').value === 'อื่นๆ'
+          ? document.getElementById('otherGuestCount').value
+          : document.getElementById('guestCountSelect').value,
+        message: document.getElementById('message').value.trim()
+      };
+
+      if (formData.attendance === 'ได้ ฉันยินดีไปร่วมงาน' && (!formData.guestCount || isNaN(formData.guestCount) || formData.guestCount < 1)) {
+        alert('กรุณาระบุจำนวนแขกให้ถูกต้อง');
+        return;
+      }
+
+      if (!formData.name || !formData.attendance || !formData.side) {
+        alert('กรุณากรอกข้อมูลที่จำเป็นให้ครบ');
+        return;
+      }
+
+      try {
+        const res = await fetch('https://script.google.com/macros/s/AKfycbzejS86u9oo6TxcUxbBMYrFhHu4I4anQoCcEtGmyzDM4MpdV45fGi3L0Nbwdz4zBMU/exec', {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const result = await res.json();
+
+        if (result.status === 'success') {
+          document.getElementById('rsvpForm').style.display = 'none';
+          const successMessage = document.getElementById('success-message');
+          successMessage.style.display = 'block';
+          successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          alert('เกิดข้อผิดพลาด: ' + result.message);
+        }
+      } catch (error) {
+        alert('การส่งข้อมูลล้มเหลว: ' + error.message);
+      }
+    });
   </script>
 </body>
+
 </html>
