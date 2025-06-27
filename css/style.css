@@ -1444,6 +1444,33 @@ iframe {
         /* เว้นให้มีที่ให้หัวข้อแสดง */
     }
 
+    /* Override fadeInLeftBig */
+    .fadeInLeftBig
+     {
+        animation-name: fadeIn !important;
+        /* เปลี่ยนเป็นแค่ fade in */
+    }
+
+    /* Override fadeInRightBig */
+    .fadeInRightBig {
+        animation-name: fadeIn !important;
+        /* เปลี่ยนเป็นแค่ fade in */
+    }
+
+    /* กำหนด keyframes สำหรับ fadeIn ใน media query นี้ (ถ้า animate.css ไม่มี fadeIn) */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 0, 0);
+            /* ไม่มีการเลื่อน */
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
     .event {
         height: 1500px;
     }
@@ -1464,13 +1491,13 @@ iframe {
         height: 1200px;
     }
 
-    .hotel{
+    .hotel {
         height: 900px;
     }
 
 
     .hero {
-        height: 1000px;
+        height: 100vh;
     }
 
 
@@ -1547,11 +1574,12 @@ iframe {
     .couple-names {
         font-size: 2rem;
     }
-    
+
     .text-please {
 
         background-attachment: local;
     }
+
     /* .section {
         padding: 70px 0;
     }
