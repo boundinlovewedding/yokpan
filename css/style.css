@@ -334,7 +334,7 @@ h4 {
 }
 
 .theme-color img {
-    width: 70%;
+    width: 40%;
     margin: 0 auto;
     display: block;
     border-radius: 20px;
@@ -707,6 +707,7 @@ h4 {
     /* color: #3d1f24; */
 }
 
+
 .wedding_events_info {
     text-align: center;
     -webkit-border-radius: 1000px;
@@ -726,7 +727,7 @@ h4 {
 /* สไตล์พื้นหลัง */
 
 #hotel {
-    height: 800px;
+    height: 100%;
     overflow-y: auto;
     padding-bottom: 50px;
 }
@@ -1392,10 +1393,13 @@ iframe {
 }
 
 /* Responsive Styles */
+
 @media (max-width: 992px) {
     .about-content {
         flex-direction: column;
     }
+
+  
 
     .countdown-container {
         margin: 0;
