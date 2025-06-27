@@ -1445,7 +1445,7 @@ iframe {
     }
 
     .event {
-        height: 160vh;
+        height: 1500px;
     }
 
     .countdown {
@@ -1457,11 +1457,15 @@ iframe {
     }
 
     .couple {
-        height: 200vh;
+        height: 1900px;
     }
 
     .location {
-        height: 115vh;
+        height: 1200px;
+    }
+
+    .hotel{
+        height: 900px;
     }
 
 
@@ -1543,7 +1547,11 @@ iframe {
     .couple-names {
         font-size: 2rem;
     }
+    
+    .text-please {
 
+        background-attachment: local;
+    }
     /* .section {
         padding: 70px 0;
     }
