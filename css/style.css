@@ -506,6 +506,11 @@ h4 {
     background-color: var(--light);
 }
 
+.gallery .section-title, 
+.gallery .section-title h2{
+    font-size: 2rem;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
