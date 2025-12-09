@@ -6,23 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Video Gallery | Yoke & Pan</title>
   <meta name="description" content="Yoke & Pan — Wedding Videos" />
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit&family=Julius+Sans+One&family=Great+Vibes&family=Sail&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&family=Kanit:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Kanit&family=Julius+Sans+One&family=Great+Vibes&family=Sail&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <style>
     :root {
-      --bg: #96948c4d; /* สีพื้นหลังเดิม */
+      --bg: #96948c4d;
+      /* สีพื้นหลังเดิม */
       --fg: #3a2e2e;
       --muted: #7d5a5a;
       --card-bg: #fff;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Julius Sans One', 'Kanit', sans-serif;
@@ -91,7 +98,7 @@
       height: 48px;
       border: none;
       border-radius: 50%;
-      background: #c7a58a;
+      background: #3a2e2e;
       color: white;
       font-size: 22px;
       cursor: pointer;
@@ -102,9 +109,15 @@
       z-index: 50;
     }
 
-    #btnTop.show { opacity: 1; pointer-events: auto; }
-    #btnTop:hover { background: #a88364; transform: scale(1.08); }
+    #btnTop.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
+    #btnTop:hover {
+      background: #96948c4d;
+      transform: scale(1.08);
+    }
   </style>
 </head>
 
@@ -114,60 +127,88 @@
     <h1>Video Gallery</h1>
     <br>
     <div class="d-flex justify-content-center gap-2">
-        <a class="btn btn-outline-secondary btn-sm" href="index.html">← กลับหน้าแรก</a>
-        <a class="btn btn-outline-secondary btn-sm" href="gallery.html">ไปหน้าอัลบั้มรูป</a>
+      <a class="btn btn-outline-secondary btn-sm" href="index.html">← กลับหน้าแรก</a>
+      <a class="btn btn-outline-secondary btn-sm" href="gallery.html">ไปหน้าอัลบั้มรูป  →</a>
     </div>
   </header>
 
   <div class="wrap">
     <div class="row">
       
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-6">
         <div class="video-card">
           <div class="ratio ratio-16x9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lc8NSuY0rgE?si=its_5CdaFUQTKqES" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pi_SYZD3LH4?si=its_5CdaFUQTKqES?rel=0&modestbranding=1&controls=1&showinfo=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3 class="video-title">Main Highlight</h3>
+            <p class="video-desc">บรรยากาศงานแต่งงานสุดประทับใจ</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <div class="video-card">
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lc8NSuY0rgE?si=its_5CdaFUQTKqES"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="video-body">
             <h3 class="video-title">ร้องเพลงเปิดตัว</h3>
-            <p class="video-desc"></p>
+            <p class="video-desc">บทเพลงแทนความในใจ ที่มอบให้กันในวันพิเศษ</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-6">
         <div class="video-card">
           <div class="ratio ratio-16x9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lc8NSuY0rgE?si=8FYv1JgWNoWIHdyW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lc8NSuY0rgE?si=8FYv1JgWNoWIHdyW"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="video-body">
             <h3 class="video-title">พิธีกรกล่าวขอบคุณ</h3>
-            <p class="video-desc"></p>
+            <p class="video-desc">คำขอบคุณจากใจ ถึงแขกผู้มีเกียรติทุกท่าน</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-6">
         <div class="video-card">
           <div class="ratio ratio-16x9">
-            
-            <iframe 
-                src="https://www.youtube.com/embed/Lc8NSuY0rgE?" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OQi4YCu8Gvs?si=cv7VuMIDD7AFZEa9"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; modestbranding=1; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
           </div>
           <div class="video-body">
-            <h3 class="video-title">ชื่อคลิปวิดีโอ</h3>
-            <p class="video-desc">คำอธิบายคลิป...</p>
+            <h3 class="video-title">After Party</h3>
+            <p class="video-desc">ทิ้งทวนค่ำคืนแห่งความสุข สนุกสุดเหวี่ยงไปกับคนรู้ใจ</p>
           </div>
         </div>
       </div>
-
+      <div class="col-md-12 col-lg-12">
+        <div class="video-card">
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NyHU2OK3vsU?si=its_5CdaFUQTKqES?rel=0&modestbranding=1&controls=1&showinfo=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <div class="video-body">
+            <h3 class="video-title">The Complete Story</h3>
+            <p class="video-desc">บันทึกทุกความทรงจำและรอยยิ้มฉบับเต็ม</p>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 
   <button id="btnTop" title="กลับขึ้นบน">↑</button>
@@ -184,4 +225,5 @@
   </script>
 
 </body>
+
 </html>
